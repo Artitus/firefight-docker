@@ -10,10 +10,10 @@ LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
 RUN apt-get update -y \
  && apt-get install -y curl ca-certificates openssl git tar sqlite fontconfig tzdata iproute2 \
  && useradd -d /home/container -m container
- 
 
 EXPOSE 1337
 EXPOSE 1338
+EXPOSE 8804
 
 USER container
 ENV  USER=container HOME=/home/container
